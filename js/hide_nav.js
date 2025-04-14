@@ -50,7 +50,8 @@ if (url === "http://127.0.0.1:5500/page/food.html") {
   document.querySelector(".recipes img").src =
     "../assets/icon/icon_recipe_active.svg";
 } else if (url === "http://127.0.0.1:5500/page/home.html") {
-  document.querySelector(".home img").src = "../assets/icon/home.svg";
+  document.querySelector(".home img").src =
+    "../assets/icon/icon_home_active.svg";
   document.querySelector("p.food img").src = "../assets/icon/icon_food.svg";
   document.querySelector(".recipes img").src = "../assets/icon/recipes.svg";
 } else if (url.includes("http://127.0.0.1:5500/page/recipe_detail.html")) {
