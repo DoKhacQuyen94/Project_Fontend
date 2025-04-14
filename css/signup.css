@@ -1,0 +1,137 @@
+:root {
+  --text-size: 16px;
+  --color-text: #212529;
+}
+@font-face {
+  font-family: "Roboto";
+  src: url("../assets/fonts/Roboto/Roboto-VariableFont.ttf") format("truetype");
+}
+html {
+  position: relative;
+}
+body,
+html {
+  height: 100%;
+  margin: 0;
+  font-family: "Roboto";
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.content {
+  padding: 30px;
+  width: 350px;
+}
+
+.content .img {
+  text-align: center;
+  margin: 28px 16px;
+}
+h2 {
+  font-size: 26.28px;
+  margin-bottom: 17.59px;
+  color: var(--color-text);
+}
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+  width: 100%;
+  height: 56px;
+  padding: 10px;
+  border: 1px solid #dee2e6;
+  border-radius: 5px;
+}
+input[type="checkbox"] {
+  margin-top: 16px;
+  margin-bottom: 16px;
+
+  border: none;
+  border-radius: 4px;
+  width: 16px;
+  height: 16px;
+}
+span {
+  display: flex;
+
+  align-items: center;
+  font-size: var(--text-size);
+}
+span input {
+  margin-right: 8px;
+}
+p {
+  margin-bottom: 16px;
+  color: var(--color-text);
+  font-size: var(--text-size);
+}
+a {
+  color: #0d6efd;
+}
+.btn {
+  background-color: #007bff;
+  width: 100%;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  margin-bottom: 48px;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: #0056b3;
+}
+.content .footer {
+  color: #212529;
+  opacity: 0.7;
+}
+@media screen and (max-width: 768px) {
+  body {
+    height: 100%;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+  }
+  .content {
+    margin: 114px 138px;
+    width: 100%;
+    height: auto;
+  }
+}
+@media screen and (max-width: 648px) {
+  .content {
+    width: auto;
+    height: auto;
+  }
+}
+.show {
+  color: rgb(251, 104, 104);
+  display: block;
+  padding: 5px 0;
+}
+
+.popup {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgb(164, 164, 164);
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.notification {
+  width: 450px;
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #ffffff;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+}
+.hide {
+  display: none;
+}

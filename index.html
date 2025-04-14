@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login</title>
+    <link rel="stylesheet" href="./css/login.css" />
+    <link rel="stylesheet" href="./css/reset.css" />
+  </head>
+  <body>
+    <div class="content">
+      <!-- Validate -->
+      <div class="validate">
+        <!-- Validate Error -->
+        <div class="validate-error hide_validate">
+          <div class="error">
+            <span><img src="./assets/icon/error.svg" alt="error" />Error</span>
+            <span>x</span>
+          </div>
+          <p class="content_validate">Mật khẩu không được bỏ trống</p>
+        </div>
+        <!-- Validate Success -->
+        <div class="validate-success hide_validate">
+          <div class="success">
+            <span>
+              <img src="./assets/icon/success.svg" alt="success" />
+              <p class="content_success">Đăng nhập thành công</p>
+            </span>
+            <span>x</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="img">
+        <img src="./assets/images/logo_reg.png" alt="logo" />
+      </div>
+      <h2>Please sign in</h2>
+      <form action="">
+        <input id="email" type="email" placeholder="Email address" />
+        <input id="password" type="password" placeholder="Password" />
+        <span><input id="remember" type="checkbox" />Remember me</span>
+        <p>Don't have an account, <a href="./page/reg.html">click here!</a></p>
+        <button class="btn">Sign in</button>
+      </form>
+      <p class="footer">&copy; 2025 - Rikkei Education</p>
+    </div>
+    <script src="./js/sign_in.js"></script>
+  </body>
+</html>

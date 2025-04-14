@@ -1,0 +1,688 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/reset.css" />
+    <link rel="stylesheet" href="../css/food.css" />
+    <link rel="stylesheet" href="../css/nav.css" />
+    <link rel="stylesheet" href="../css/add_food.css" />
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  </head>
+  <body>
+    <!-- add food -->
+    <div class="modal-backdrop hide_modal">
+      <div class="main">
+        <div class="title">
+          <p>Add new food</p>
+          <p>Fill in the fields below with the food information</p>
+        </div>
+
+        <div class="infor_add">
+          <div class="left">
+            <p>
+              <span>Name</span>
+              <input type="text" name="name" />
+            </p>
+            <p>
+              <span>Category</span>
+              <input
+                type="text"
+                name="category"
+                placeholder="Select the food group"
+              />
+            </p>
+          </div>
+
+          <div class="right">
+            <p>
+              <span>Source</span>
+              <input type="text" name="source" placeholder="My foods" />
+            </p>
+            <p>
+              <span>Quantity</span>
+              <input type="text" name="quantity" placeholder="100" />
+              <span>grams</span>
+            </p>
+          </div>
+        </div>
+        <div class="nutritional">
+          <p>Nutritional value per 100 g</p>
+        </div>
+        <div class="macronutrients">
+          <span>Macronutrients</span>
+          <div class="content_macronutrional">
+            <div class="left_macronutrional">
+              <p>
+                <span>Energy</span>
+                <input type="text" name="energy" />
+                <span>kcal</span>
+              </p>
+              <p>
+                <span>Carbohydrate</span>
+                <input type="text" name="carbohydrate" />
+                <span>g</span>
+              </p>
+            </div>
+            <div class="right_macronutrional">
+              <p>
+                <span>Fat</span>
+                <input type="text" name="fat" />
+                <span>g</span>
+              </p>
+              <p>
+                <span>Protein</span>
+                <input type="text" name="protein" />
+                <span>g</span>
+              </p>
+            </div>
+          </div>
+
+          <span>Macronutrients</span>
+          <div class="specifications">
+            <p>
+              <span>Cholesterol</span>
+              <input type="text" name="cholesterol" />
+              <span>mg</span>
+            </p>
+            <p>
+              <span>Fiber</span>
+              <input type="text" name="fiber" />
+              <span>g</span>
+            </p>
+            <p>
+              <span>Sodium</span>
+              <input type="text" name="sodium" />
+              <span>mg</span>
+            </p>
+            <p>
+              <span>Water</span>
+              <input type="text" name="water" />
+              <span>g</span>
+            </p>
+            <p>
+              <span>Vitamin A</span>
+              <input type="text" name="vitaminA" />
+              <span>ug</span>
+            </p>
+            <p>
+              <span>Vitamin B-6</span>
+              <input type="text" name="vitaminB6" />
+              <span>mg</span>
+            </p>
+            <p>
+              <span>Vitamin B-12</span>
+              <input type="text" name="vitaminB12" />
+              <span>ug</span>
+            </p>
+            <p>
+              <span>Vitamin C</span>
+              <input type="text" name="vitaminC" />
+              <span>mg</span>
+            </p>
+            <p>
+              <span>Vitamin D (D2 +D3)</span>
+              <input type="text" name="vitaminD" />
+              <span>ug</span>
+            </p>
+            <p>
+              <span>Vitamin E</span>
+              <input type="text" name="vitaminE" />
+              <span>mg</span>
+            </p>
+            <p>
+              <span>Vitamin K</span>
+              <input type="text" name="vitaminK" />
+              <span>ug</span>
+            </p>
+            <p>
+              <span>Starch</span>
+              <input type="text" name="starch" />
+              <span>g</span>
+            </p>
+            <p>
+              <span>Lactose</span>
+              <input type="text" name="lactose" />
+              <span>g</span>
+            </p>
+            <p>
+              <span>Alcohol</span>
+              <input type="text" name="alcohol" />
+              <span>g</span>
+            </p>
+            <p>
+              <span>Caffeine</span>
+              <input type="text" name="caffeine" />
+              <span>mg</span>
+            </p>
+            <p>
+              <span>Sugars</span>
+              <input type="text" name="sugars" />
+              <span>g</span>
+            </p>
+            <p>
+              <span>Calcium</span>
+              <input type="text" name="calcium" />
+              <span>mg</span>
+            </p>
+            <p>
+              <span>Iron</span>
+              <input type="text" name="iron" />
+              <span>mg</span>
+            </p>
+            <p>
+              <span>Magnesium</span>
+              <input type="text" name="magnesium" />
+              <span>mg</span>
+            </p>
+            <p>
+              <span>Phosphorus</span>
+              <input type="text" name="phosphorus" />
+              <span>mg</span>
+            </p>
+            <p>
+              <span>Potassium</span>
+              <input type="text" name="potassium" />
+              <span>mg</span>
+            </p>
+            <p>
+              <span>Zinc</span>
+              <input type="text" name="zinc" />
+              <span>mg</span>
+            </p>
+            <p>
+              <span>Copper</span>
+              <input type="text" name="copper" />
+              <span>mg</span>
+            </p>
+            <p>
+              <span>Fluoride</span>
+              <input type="text" name="fluoride" />
+              <span>ug</span>
+            </p>
+            <p>
+              <span>Manganese</span>
+              <input type="text" name="manganese" />
+              <span>mg</span>
+            </p>
+            <p>
+              <span>Selenium</span>
+              <input type="text" name="selenium" />
+              <span>ug</span>
+            </p>
+            <p>
+              <span>Thiamin</span>
+              <input type="text" name="thiamin" />
+              <span>mg</span>
+            </p>
+            <p>
+              <span>Riboflavin</span>
+              <input type="text" name="riboflavin" />
+              <span>mg</span>
+            </p>
+            <p>
+              <span>Niacin</span>
+              <input type="text" name="niacin" />
+              <span>mg</span>
+            </p>
+            <p>
+              <span>Pantothenic acid</span>
+              <input type="text" name="pantothenicAcid" />
+              <span>mg</span>
+            </p>
+            <p>
+              <span>Folate, total</span>
+              <input type="text" name="folateTotal" />
+              <span>ug</span>
+            </p>
+            <p>
+              <span>Folic acid</span>
+              <input type="text" name="folicAcid" />
+              <span>ug</span>
+            </p>
+            <p>
+              <span>Fatty acids, total trans</span>
+              <input type="text" name="fattyAcidsTrans" />
+              <span>g</span>
+            </p>
+            <p>
+              <span>Fatty acids, total saturated</span>
+              <input type="text" name="fattyAcidsSaturated" />
+              <span>g</span>
+            </p>
+            <p>
+              <span>Fatty acids, total monounsaturated</span>
+              <input type="text" name="fattyAcidsMonounsaturated" />
+              <span>g</span>
+            </p>
+            <p>
+              <span>Fatty acids, total polyunsaturated</span>
+              <input type="text" name="fattyAcidsPolyunsaturated" />
+              <span>g</span>
+            </p>
+            <p>
+              <span>Chloride</span>
+              <input type="text" name="chloride" />
+              <span>mg</span>
+            </p>
+          </div>
+        </div>
+        <div class="button">
+          <button class="cancel">Cancel</button>
+          <button class="save">Save and close</button>
+        </div>
+      </div>
+    </div>
+    <!-- imformation -->
+    <div class="modal-imformation hide_modal">
+      <div class="main">
+        <div class="title">
+          <p>Food information</p>
+          <p>Check and update the information about the food</p>
+        </div>
+
+        <div class="infor_add">
+          <div class="left">
+            <p>
+              <span>Name</span>
+              <input type="text" name="name" value="Ackee, canned, drained" />
+            </p>
+            <p>
+              <span>Category</span>
+              <input
+                type="text"
+                name="category"
+                value="Vegetables and Vegetable Products"
+              />
+            </p>
+          </div>
+
+          <div class="right">
+            <p>
+              <span>Source</span>
+              <input
+                type="text"
+                name="source"
+                value="McCance and Widdowson's"
+              />
+            </p>
+            <p>
+              <span>Quantity</span>
+              <input type="text" name="quantity" value="100" />
+              <span>grams</span>
+            </p>
+          </div>
+        </div>
+        <div class="nutritional">
+          <p>Nutritional value per 100 g</p>
+        </div>
+        <div class="macronutrients">
+          <span>Macronutrients</span>
+          <div class="content_macronutrional">
+            <div class="left_macronutrional">
+              <p>
+                <span>Energy</span>
+                <input type="text" name="energy" value="151.0" />
+                <span>kcal</span>
+              </p>
+              <p>
+                <span>Carbohydrate</span>
+                <input type="text" name="carbohydrate" value="0.8" />
+                <span>g</span>
+              </p>
+            </div>
+
+            <div class="right_macronutrional">
+              <p>
+                <span>Fat</span>
+                <input type="text" name="fat" value="15.2" />
+                <span>g</span>
+              </p>
+              <p>
+                <span>Protein</span>
+                <input type="text" name="protein" value="2.9" />
+                <span>g</span>
+              </p>
+            </div>
+          </div>
+          <span>Macronutrients</span>
+
+          <div class="specifications">
+            <p>
+              <span>Cholesterol</span>
+              <input type="text" name="cholesterol" value="0.0" />
+              <span>mg</span>
+            </p>
+            <p>
+              <span>Fiber</span>
+              <input type="text" name="fiber" value="" />
+              <span>g</span>
+            </p>
+            <p>
+              <span>Sodium</span>
+              <input type="text" name="sodium" value="240.0" />
+              <span>mg</span>
+            </p>
+            <p>
+              <span>Water</span>
+              <input type="text" name="water" value="76.7" />
+              <span>g</span>
+            </p>
+            <p>
+              <span>Vitamin A</span>
+              <input type="text" name="vitaminA" value="" />
+              <span>ug</span>
+            </p>
+            <p>
+              <span>Vitamin B-6</span>
+              <input type="text" name="vitaminB6" value="0.06" />
+              <span>mg</span>
+            </p>
+            <p>
+              <span>Vitamin B-12</span>
+              <input type="text" name="vitaminB12" value="0.0" />
+              <span>ug</span>
+            </p>
+            <p>
+              <span>Vitamin C</span>
+              <input type="text" name="vitaminC" value="30.0" />
+              <span>mg</span>
+            </p>
+            <p>
+              <span>Vitamin D (D2 +D3)</span>
+              <input type="text" name="vitaminD" value="0.0" />
+              <span>ug</span>
+            </p>
+            <p>
+              <span>Vitamin E</span>
+              <input type="text" name="vitaminE" value="" />
+              <span>mg</span>
+            </p>
+            <p>
+              <span>Vitamin K</span>
+              <input type="text" name="vitaminK" value="" />
+              <span>ug</span>
+            </p>
+            <p>
+              <span>Starch</span>
+              <input type="text" name="starch" value="0.0" />
+              <span>g</span>
+            </p>
+            <p>
+              <span>Lactose</span>
+              <input type="text" name="lactose" value="0.0" />
+              <span>g</span>
+            </p>
+            <p>
+              <span>Alcohol</span>
+              <input type="text" name="alcohol" value="" />
+              <span>g</span>
+            </p>
+            <p>
+              <span>Caffeine</span>
+              <input type="text" name="caffeine" value="" />
+              <span>mg</span>
+            </p>
+            <p>
+              <span>Sugars</span>
+              <input type="text" name="sugars" value="0.8" />
+              <span>g</span>
+            </p>
+            <p>
+              <span>Calcium</span>
+              <input type="text" name="calcium" value="35.0" />
+              <span>mg</span>
+            </p>
+            <p>
+              <span>Iron</span>
+              <input type="text" name="iron" value="0.7" />
+              <span>mg</span>
+            </p>
+            <p>
+              <span>Magnesium</span>
+              <input type="text" name="magnesium" value="40.0" />
+              <span>mg</span>
+            </p>
+            <p>
+              <span>Phosphorus</span>
+              <input type="text" name="phosphorus" value="47.0" />
+              <span>mg</span>
+            </p>
+            <p>
+              <span>Potassium</span>
+              <input type="text" name="potassium" value="270.0" />
+              <span>mg</span>
+            </p>
+            <p>
+              <span>Zinc</span>
+              <input type="text" name="zinc" value="0.6" />
+              <span>mg</span>
+            </p>
+            <p>
+              <span>Copper</span>
+              <input type="text" name="copper" value="0.27" />
+              <span>mg</span>
+            </p>
+            <p>
+              <span>Fluoride</span>
+              <input type="text" name="fluoride" value="" />
+              <span>ug</span>
+            </p>
+            <p>
+              <span>Manganese</span>
+              <input type="text" name="manganese" value="" />
+              <span>mg</span>
+            </p>
+            <p>
+              <span>Selenium</span>
+              <input type="text" name="selenium" value="" />
+              <span>ug</span>
+            </p>
+            <p>
+              <span>Thiamin</span>
+              <input type="text" name="thiamin" value="0.03" />
+              <span>mg</span>
+            </p>
+            <p>
+              <span>Riboflavin</span>
+              <input type="text" name="riboflavin" value="0.07" />
+              <span>mg</span>
+            </p>
+            <p>
+              <span>Niacin</span>
+              <input type="text" name="niacin" value="0.6" />
+              <span>mg</span>
+            </p>
+            <p>
+              <span>Pantothenic acid</span>
+              <input type="text" name="pantothenicAcid" value="" />
+              <span>mg</span>
+            </p>
+            <p>
+              <span>Folate, total</span>
+              <input type="text" name="folateTotal" value="41.0" />
+              <span>ug</span>
+            </p>
+            <p>
+              <span>Folic acid</span>
+              <input type="text" name="folicAcid" value="" />
+              <span>ug</span>
+            </p>
+            <p>
+              <span>Fatty acids, total trans</span>
+              <input type="text" name="fattyAcidsTrans" value="0.0" />
+              <span>g</span>
+            </p>
+            <p>
+              <span>Fatty acids, total saturated</span>
+              <input type="text" name="fattyAcidsSaturated" value="" />
+              <span>g</span>
+            </p>
+            <p>
+              <span>Fatty acids, total monounsaturated</span>
+              <input type="text" name="fattyAcidsMonounsaturated" value="" />
+              <span>g</span>
+            </p>
+            <p>
+              <span>Fatty acids, total polyunsaturated</span>
+              <input type="text" name="fattyAcidsPolyunsaturated" value="" />
+              <span>g</span>
+            </p>
+            <p>
+              <span>Chloride</span>
+              <input type="text" name="chloride" value="340.0" />
+              <span>mg</span>
+            </p>
+          </div>
+        </div>
+        <div class="button">
+          <button class="cancel">Cancel</button>
+          <button class="save">Save and close</button>
+        </div>
+      </div>
+    </div>
+    <!-- Giao diện chính -->
+    <div class="wrapper">
+      <nav class="nav">
+        <div class="logo">
+          <img id="img_logo" src="../assets/images/logo_reg.png" alt="Logo" />
+          <div class="list_nav">
+            <p class="home">
+              <img src="../assets/icon/icon_home_active.svg" alt="" />
+              <span>Homepage</span>
+            </p>
+            <p class="food">
+              <img src="../assets/icon/icon_food.svg" alt="" />
+              <span>Foods</span>
+            </p>
+            <p class="recipes">
+              <img src="../assets/icon/recipes.svg" alt="" />
+              <span>Recipes</span>
+            </p>
+          </div>
+        </div>
+        <div class="sign_out">
+          <img src="../assets/icon/sign_out.svg" alt="" />
+          <span id="log-out">Sign out</span>
+        </div>
+      </nav>
+
+      <div class="container">
+        <div class="infor">
+          <img
+            src="../assets/icon/Button_nav.svg"
+            alt="Button_nav"
+            class="Button_nav"
+          />
+          <span class="userName">Đỗ Khắc Quyền</span>
+        </div>
+        <div class="task">
+          <p>Food databases</p>
+          <p>Create, check and update foods that you can use on meal plans</p>
+        </div>
+        <div class="content">
+          <!-- thông tin bảng -->
+          <div class="recip">
+            <p>Foods</p>
+            <p>Search, consult and add new foods to the system</p>
+          </div>
+          <!-- Công cụ search,sort -->
+          <div class="search">
+            <input class="search_food" type="text" placeholder="Search food" />
+            <div class="custom_input">
+              <button>
+                <img src="../assets/icon/sort.svg" alt="" />
+                <select name="sort_order">
+                  <option value="" disabled selected>Sort by nutrient</option>
+                  <option value="energy_asc">Energy (Ascending)</option>
+                  <option value="energy_desc">Energy (Descending)</option>
+                  <option value="carbohydrate_asc">
+                    Carbohydrate (Ascending)
+                  </option>
+                  <option value="carbohydrate_desc">
+                    Carbohydrate (Descending)
+                  </option>
+                  <option value="fat_asc">Fat (Ascending)</option>
+                  <option value="fat_desc">Fat (Descending)</option>
+                  <option value="protein_asc">Protein (Ascending)</option>
+                  <option value="protein_desc">Protein (Descending)</option>
+                </select>
+              </button>
+            </div>
+            <select name="category_filter">
+              <option value="" selected>All Categories</option>
+              <!-- Thêm option vào đây -->
+            </select>
+          </div>
+          <!-- Lưới phần tử con -->
+          <div class="food_child">
+            <!-- child js thêm vào đây -->
+            <!-- <div class="child">
+              <div class="text">
+                <p>Ackee, canned, drained</p>
+                <p>McCance and Widdowson's</p>
+              </div>
+              <div class="specifications">
+                <table>
+                  <tr>
+                    <td>151 kcal</td>
+                    <td>15 g</td>
+                    <td>1 g</td>
+                    <td>3 g</td>
+                  </tr>
+                  <tr>
+                    <th>Energy</th>
+                    <th>Fat</th>
+                    <th>Carbohydrate</th>
+                    <th>Protein</th>
+                  </tr>
+                </table>
+              </div>
+            </div> -->
+
+            <!-- <div class="child">
+              <div class="text">
+                <p>Ackee, canned, drained</p>
+                <p>McCance and Widdowson's</p>
+              </div>
+              <div class="specifications">
+                <table>
+                  <tr>
+                    <td>151 kcal</td>
+                    <td>15 g</td>
+                    <td>1 g</td>
+                    <td>3 g</td>
+                  </tr>
+                  <tr>
+                    <th>Energy</th>
+                    <th>Fat</th>
+                    <th>Carbohydrate</th>
+                    <th>Protein</th>
+                  </tr>
+                </table>
+              </div>
+            </div> -->
+          </div>
+          <div class="creat_food">
+            <img src="../assets/icon/creat_food_icon.svg" alt="creat_food" />
+            <span>Creat food</span>
+          </div>
+          <div class="page">
+            <div class="list_page">
+              <button class="prev-page">
+                <img src="../assets/icon/lui_page.svg" alt="lui_page" />
+              </button>
+              <button class="next-page">
+                <img src="../assets/icon/next_page.svg" alt="next_page" />
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="../js/hide_nav.js"></script>
+    <script src="../js/food.js"></script>
+  </body>
+</html>
